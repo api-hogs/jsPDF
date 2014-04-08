@@ -79,7 +79,8 @@ var jsPDF = (function(global) {
 			'legal'             : [612,  1008],
 			'junior-legal'      : [576,   360],
 			'ledger'            : [1224,  792],
-			'tabloid'           : [792,  1224]
+			'tabloid'           : [792,  1224],
+			'tabloid-small'     : [225*72/25.4,300*72/25.4]
 		};
 
 	/**
@@ -722,7 +723,7 @@ var jsPDF = (function(global) {
 			} else if (style === 'FD' || style === 'DF') {
 				op = 'B'; // both
 			} else if (style === 'f' || style === 'f*' || style === 'B' || style === 'B*') {
-				/* 
+				/*
 				Allow direct use of these PDF path-painting operators:
 				- f	fill using nonzero winding number rule
 				- f*	fill using even-odd rule
@@ -1241,11 +1242,11 @@ var jsPDF = (function(global) {
 					f2((pageHeight - y) * k),
 					'c'
 				].join(' '));
-				
+
 			if (style !== null) {
 				out(getStyle(style));
-			}				
-				
+			}
+
 			return this;
 		};
 
