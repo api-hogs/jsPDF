@@ -80,7 +80,7 @@ var jsPDF = (function(global) {
 			'junior-legal'      : [576,   360],
 			'ledger'            : [1224,  792],
 			'tabloid'           : [792,  1224],
-			'tabloid-small'     : [225*72/25.4,300*72/25.4]
+			'tabloid-small'     : [235*72/25.4, 305*72/25.4]
 		};
 
 	/**
